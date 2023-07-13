@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
-    
+
 }
 
 * {
@@ -12,97 +11,111 @@ body {
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     position:fixed;
 }
 
 .navbar {
-    height: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
     width: 275px;
     font-size: 15px;
     overflow-y: scroll; 
-    margin-top: -40px;
 }
 
 .navbar .logo {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items:center;
+    margin-left: -78px;
 }
 
 .logo img {
-    margin: 0;
-    padding: 0;
+    width: 32px;
+    margin-left: -20px;
 }
 
 .navbar .nav-items {
     font-weight: 400;
-    margin-top: -45px;
 }
 
 .nav-item {
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.active {
-   font-weight: 700;
+.nav-item i:active, .nav-item:hover{
+   font-weight: bold;
    color: #000000;
+   background-color: #e6e6e6;
+   border-radius: 25px;
 }
 
-.nav-item:hover {
+/* .nav-item:hover {
     background-color: #e6e6e6;
     border-radius: 25px;
-}
+} */
 
-.bi {
+i {
     margin: 0 20px 0 15px; 
     color: #000000;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .tweet {
     border-radius: 999px 999px 999px 999px;
     line-height: 20px;
     font-weight: 700;
-    height: 50px;
+    height: 40px;
+    width: 167px;
     background-color: #1d9bf0;
     color: #ffffff;
 }
 
 .profile-actions {
+    height: calc(100vh - 80%);
+}
+
+.profile-actions .profile {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: calc(100vh - 98%);
-    margin: 12px 0 12px 0;
+    height: 45%;
+    margin-top: 45px;
     font-size: 0.75rem;
     cursor: pointer;
 }
 
-.profile-actions img {
+.profile-actions .profile img {
     height: 40px;
     width: 40px;
     border-radius: 25px 25px 25px 25px;
     position: relative;
     margin: 15px;
-
 }
 
-.profile-details span{
+.profile-actions .profile span{
    display: flex;
    flex-direction: column;
-   margin-right: 45px;
+   margin-right: 30px;
    color: #aaa;
 }
 
-.profile-details .name {
+.profile-actions .profile .name {
     font-size: 15px;
     font-weight: 600;
     color: #000000;
 }
 
 
-.profile-actions:hover {
+.profile:hover {
     background-color: #e6e6e6;
     border-radius: 999px 999px 999px 999px;
 }
