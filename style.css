@@ -8,19 +8,25 @@
     width: 100vw;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
   }
 
   .side-bar {
     flex: 1;
+    position:fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* position:fixed; */
     height: 100vh;
     width: 300px;
+    top: 0;
+    left: 0;
     border-right: 1px solid #eff3f4;
     font-size: 15px;
     color: #0f1419;
+    z-index: 1000;
     
   }
 
@@ -98,12 +104,12 @@ i {
     cursor: pointer;
 }
 
-.profile-actions .profile img {
+ .profile img {
     height: 40px;
     width: 40px;
     border-radius: 25px 25px 25px 25px;
     position: relative;
-    margin: 15px;
+    margin: 0 8px;
 }
 
 .profile-actions .profile span{
@@ -119,7 +125,7 @@ i {
 }
 
 
-.profile:hover {
+.profile-actions .profile:hover {
     background-color: #e6e6e6;
     border-radius: 999px 999px 999px 999px;
 }
@@ -128,11 +134,12 @@ i {
 
   .main-container {
     flex: 2;
-    margin-right: auto;
-    margin-left: auto;
+    height: 100vh;
     border-right: 1px solid #000000;
     font-size: 15px;
     color: #0f1419;
+    margin-left: 300px;
+    position: relative;
     
   }
 
@@ -141,9 +148,16 @@ i {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    height: 95px;
     width: 510px;
-    border-bottom: 1px solid #eff3f4;;
+    border-bottom: 1px solid #eff3f4;
+}
+
+.main-container .home-head {
+    height: 95px;
+    position: fixed;
+    color: #0f1419;
+    background-color: #ffffffd9;
+    backdrop-filter: blur(12px);
 }
 .home h5 {
     padding: 2px 16px 2px 16px;
@@ -167,6 +181,7 @@ i {
 }
 
 
+
 .content span:hover {
     font-weight: bold;
     color: #000000;
@@ -174,10 +189,13 @@ i {
  }
 
 .home .post-tweet{
+    margin-top: 95px;
+    height: 95px;
    display: flex;
    font-size: 17px;
    font-weight: 400;
    color: #536471;
+   
 } 
 
 .home .post-tweet img {
@@ -220,6 +238,93 @@ i {
    background-color: #1d9bf0;
    opacity: 0.5; 
 }
+
+.containter .home .posts {
+  display: flex;
+  padding-top: 8px;
+}
+
+.posts .post {
+    padding-bottom: 12px;
+}
+
+.post .profile-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+
+.post .profile {
+    font-size: 13px;
+}
+
+.post .name {
+    font-weight: 600;
+    color: #000000;
+}
+
+.post svg {
+    color: #1d9bf0;
+}
+
+.post .username {
+    color: #aaa;
+}
+
+.posts .post img {
+    height: 510px;
+    width: 400px;
+    border: 1px solid #cfd9de;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+.post .post-stats{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #536471; 
+    cursor: pointer;  
+}
+
+.post-stats :nth-child(n){
+    line-height: 25px;
+}
+
+.post-stats svg {
+    color: #536471;
+    line-height: 20px;
+}
+
+
+ .reply:hover {
+    color: #1d9bf0;
+}
+
+
+.retweet:hover {
+    color: #04aa6d;
+}
+
+ .likes:hover {
+    color: #d87093;
+   
+}
+
+ .views:hover {
+    color: #1d9bf0;
+}
+
+
+ .share:hover {
+    color: #1d9bf0;
+}
+
+
 
   /* trending container*/
   .trending-container {
