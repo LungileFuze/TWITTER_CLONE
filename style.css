@@ -576,7 +576,8 @@ i {
 }
 
 .posts .post {
-  width: 61%;
+  width: 57%;
+ 
 }
 
 .profile img {
@@ -586,6 +587,7 @@ i {
   position: relative;
   margin: 0 8px;
 }
+
 
  .mobile-footer{
   display: flex;
