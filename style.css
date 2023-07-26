@@ -138,7 +138,6 @@ i {
   .main-container {
     flex: 2;
     height: 100vh;
-   border-right: 1px solid #eff3f4;
     font-size: 15px;
     color: #0f1419;
     margin-left: 300px;
@@ -153,6 +152,8 @@ i {
     justify-content: space-between;
     width: 510px;
     border-bottom: 1px solid #eff3f4;
+    border-right: 1px solid #eff3f4;
+    padding-right: 15px;
 }
 
 .main-container .home-head {
@@ -532,6 +533,7 @@ i {
     max-width: 510px;
     border-bottom: 1px solid #eff3f4;
     position: relative;
+    padding-right: 5px;
 
 }
 
