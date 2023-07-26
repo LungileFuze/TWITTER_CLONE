@@ -568,8 +568,10 @@ i {
 .containter .home .posts {
   display: flex;
   z-index: -1;
-  padding-bottom: 49px;
-  
+}
+
+.mobile-space {
+  padding-bottom: 53px;
 }
 
 .post-mobile {
