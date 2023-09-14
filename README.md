@@ -1,2 +1,3 @@
 # TWITTER_CLONE
-Twitter clone
+Twitter clone - UI
+              - Mobile Optimized
